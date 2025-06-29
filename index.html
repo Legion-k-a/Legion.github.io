@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdulaziz Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #c2e9fb, #a1c4fd);
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .header {
+      text-align: center;
+      padding: 30px 0;
+    }
+    .header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+    }
+    .contact {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background: #333;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Abdulaziz</h1>
+      <p>Frontend Developer & Car Sales Expert</p>
+    </div>
+
+    <div class="card">
+      <h2>🎓 About Me</h2>
+      <p>I am a student from Uzbekistan, passionate about web development, car sales, and dietetics. I love CS2 (Mirage!), Dota 2, and enjoy exploring places like Tashkent City Mall, Washington, and New York.</p>
+    </div>
+
+    <div class="card">
+      <h2>💼 Skills</h2>
+      <ul>
+        <li>HTML / CSS / JavaScript</li>
+        <li>Frontend Development</li>
+        <li>Car Sales & Market Research</li>
+        <li>Trading Basics & Logistics</li>
+        <li>English B1+</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>📷 Gallery</h2>
+      <div class="grid gallery">
+        <img src="https://source.unsplash.com/featured/?car" alt="Car">
+        <img src="https://source.unsplash.com/featured/?coding" alt="Coding">
+        <img src="https://source.unsplash.com/featured/?tashkent" alt="Tashkent">
+        <img src="https://source.unsplash.com/featured/?game" alt="Game">
+      </div>
+    </div>
+
+    <div class="card contact">
+      <h2>📬 Contact Me</h2>
+      <a href="mailto:abdulaziz@example.com" class="btn">Email</a>
+      <a href="tel:+998901234567" class="btn">Call</a>
+      <a href="https://github.com/abdulazizdev" class="btn" target="_blank">GitHub</a>
+    </div>
+  </div>
+</body>
+</html>
