@@ -6,68 +6,115 @@
   <title>Abdulaziz Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     body {
       background: linear-gradient(to right, #e0eafc, #cfdef3);
+      scroll-behavior: smooth;
+    }
+    .glow {
+      text-shadow: 0 0 5px rgba(255,255,255,0.5), 0 0 10px rgba(0,0,0,0.2);
+    }
+    .animated-gradient {
+      background: linear-gradient(-45deg, #93a5cf, #e4efe9, #a1c4fd, #c2e9fb);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
   </style>
 </head>
 <body class="text-gray-800">
-  <header class="text-center py-10 bg-white shadow-md">
-    <h1 class="text-4xl font-bold" id="title">Abdulaziz</h1>
-    <p class="text-lg text-gray-600 mt-2">Web Developer | Car Sales Pro | Tech Enthusiast</p>
+  <header class="text-center py-16 bg-white shadow-lg sticky top-0 z-50">
+    <h1 class="text-5xl font-extrabold glow" id="title">Abdulaziz</h1>
+    <p class="text-lg text-gray-600 mt-3">Web Developer | Car Sales Pro | Tech Enthusiast</p>
+    <div class="mt-4 flex justify-center gap-4 animate-bounce">
+      <a href="#about" class="text-blue-600 hover:underline">About</a>
+      <a href="#skills" class="text-blue-600 hover:underline">Skills</a>
+      <a href="#projects" class="text-blue-600 hover:underline">Projects</a>
+      <a href="#gallery" class="text-blue-600 hover:underline">Gallery</a>
+      <a href="#contact" class="text-blue-600 hover:underline">Contact</a>
+    </div>
   </header>
 
-  <main class="max-w-5xl mx-auto px-4 py-10">
-    <section class="mb-10 bg-white p-6 rounded-2xl shadow-lg" id="about">
-      <h2 class="text-2xl font-bold mb-4">👋 About Me</h2>
-      <p>
-        I’m Abdulaziz, a motivated student from Uzbekistan. I enjoy coding, business,
-        and gaming. Skilled in HTML, CSS, JS and passionate about frontend development,
-        trading, logistics, and fitness nutrition. I help sell cars with my dad and play
-        CS2 (Mirage!) and Dota 2.
+  <main class="max-w-6xl mx-auto px-6 py-12">
+    <section class="mb-16 bg-white p-8 rounded-3xl shadow-xl" id="about">
+      <h2 class="text-3xl font-bold mb-4">👋 About Me</h2>
+      <p class="text-lg leading-relaxed">
+        I’m Abdulaziz, a passionate student from Uzbekistan. I build websites with love and business sense. I help sell cars, learn trading, explore fitness and tech. I love CS2 (Mirage!), Dota 2 and discovering new things in Tashkent and beyond.
       </p>
     </section>
 
-    <section class="mb-10 bg-white p-6 rounded-2xl shadow-lg" id="skills">
-      <h2 class="text-2xl font-bold mb-4">🛠 Skills</h2>
-      <ul class="grid grid-cols-2 md:grid-cols-4 gap-4 list-disc pl-5">
-        <li>HTML5 / CSS3 / JavaScript</li>
-        <li>Responsive Design</li>
-        <li>Car Market Analysis</li>
-        <li>Trading & Import Logistics</li>
-        <li>React (basic)</li>
-        <li>Git & GitHub</li>
-        <li>English B1+ / Russian / Uzbek</li>
-        <li>Teamwork & Communication</li>
-      </ul>
-    </section>
-
-    <section class="mb-10 bg-white p-6 rounded-2xl shadow-lg" id="projects">
-      <h2 class="text-2xl font-bold mb-4">📂 Projects</h2>
-      <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 list-disc pl-5">
-        <li>Personal Portfolio Website (this one!)</li>
-        <li>Simple Car Listing HTML Page</li>
-        <li>Frontend Task Manager UI</li>
-        <li>Logistics Info App (mockup)</li>
-      </ul>
-    </section>
-
-    <section class="mb-10 bg-white p-6 rounded-2xl shadow-lg" id="gallery">
-      <h2 class="text-2xl font-bold mb-4">📸 Gallery</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <img src="https://source.unsplash.com/featured/?tashkent" alt="Tashkent" class="w-full h-48 object-cover rounded-xl shadow">
-        <img src="https://source.unsplash.com/featured/?cars" alt="Cars" class="w-full h-48 object-cover rounded-xl shadow">
-        <img src="https://source.unsplash.com/featured/?computer" alt="Computer" class="w-full h-48 object-cover rounded-xl shadow">
-        <img src="https://source.unsplash.com/featured/?csgo" alt="CS2" class="w-full h-48 object-cover rounded-xl shadow">
-        <img src="https://source.unsplash.com/featured/?nutrition" alt="Nutrition" class="w-full h-48 object-cover rounded-xl shadow">
-        <img src="https://source.unsplash.com/featured/?travel" alt="Travel" class="w-full h-48 object-cover rounded-xl shadow">
+    <section class="mb-16 bg-white p-8 rounded-3xl shadow-xl" id="skills">
+      <h2 class="text-3xl font-bold mb-6">🛠 Skills</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center">
+        <div class="bg-gray-100 p-4 rounded-xl hover:scale-105 transform transition">
+          <i class="fab fa-html5 text-orange-500 text-4xl"></i>
+          <p>HTML5</p>
+        </div>
+        <div class="bg-gray-100 p-4 rounded-xl hover:scale-105 transform transition">
+          <i class="fab fa-css3-alt text-blue-500 text-4xl"></i>
+          <p>CSS3</p>
+        </div>
+        <div class="bg-gray-100 p-4 rounded-xl hover:scale-105 transform transition">
+          <i class="fab fa-js text-yellow-400 text-4xl"></i>
+          <p>JavaScript</p>
+        </div>
+        <div class="bg-gray-100 p-4 rounded-xl hover:scale-105 transform transition">
+          <i class="fab fa-react text-blue-400 text-4xl"></i>
+          <p>React</p>
+        </div>
+        <div class="bg-gray-100 p-4 rounded-xl hover:scale-105 transform transition">
+          <i class="fab fa-github text-black text-4xl"></i>
+          <p>GitHub</p>
+        </div>
+        <div class="bg-gray-100 p-4 rounded-xl hover:scale-105 transform transition">
+          <i class="fas fa-language text-green-500 text-4xl"></i>
+          <p>English B1+ / Uzbek / Russian</p>
+        </div>
+        <div class="bg-gray-100 p-4 rounded-xl hover:scale-105 transform transition">
+          <i class="fas fa-people-carry text-purple-500 text-4xl"></i>
+          <p>Teamwork</p>
+        </div>
       </div>
     </section>
 
-    <section class="mb-10 bg-white p-6 rounded-2xl shadow-lg text-center" id="contact">
-      <h2 class="text-2xl font-bold mb-4">📬 Contact</h2>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
+    <section class="mb-16 bg-white p-8 rounded-3xl shadow-xl animated-gradient" id="projects">
+      <h2 class="text-3xl font-bold mb-6 text-white">📂 Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white/80 p-6 rounded-xl shadow-lg hover:scale-105 transition">
+          <h3 class="font-semibold text-xl mb-2">Personal Portfolio</h3>
+          <p>Built with HTML, Tailwind, and ScrollReveal. Fully responsive.</p>
+        </div>
+        <div class="bg-white/80 p-6 rounded-xl shadow-lg hover:scale-105 transition">
+          <h3 class="font-semibold text-xl mb-2">Car Listings UI</h3>
+          <p>Showcases car ads with smooth grid layout and filters (HTML/CSS).</p>
+        </div>
+        <div class="bg-white/80 p-6 rounded-xl shadow-lg hover:scale-105 transition">
+          <h3 class="font-semibold text-xl mb-2">Trading App Design</h3>
+          <p>Mockup design for mobile trading app — charts, login, profile.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16 bg-white p-8 rounded-3xl shadow-xl" id="gallery">
+      <h2 class="text-3xl font-bold mb-6">📸 Gallery</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <img src="https://source.unsplash.com/featured/?tashkent" alt="Tashkent" class="rounded-xl shadow hover:scale-105 transition duration-300">
+        <img src="https://source.unsplash.com/featured/?cars" alt="Cars" class="rounded-xl shadow hover:scale-105 transition duration-300">
+        <img src="https://source.unsplash.com/featured/?computer" alt="Coding" class="rounded-xl shadow hover:scale-105 transition duration-300">
+        <img src="https://source.unsplash.com/featured/?csgo" alt="CS2" class="rounded-xl shadow hover:scale-105 transition duration-300">
+        <img src="https://source.unsplash.com/featured/?nutrition" alt="Nutrition" class="rounded-xl shadow hover:scale-105 transition duration-300">
+        <img src="https://source.unsplash.com/featured/?travel" alt="Travel" class="rounded-xl shadow hover:scale-105 transition duration-300">
+      </div>
+    </section>
+
+    <section class="mb-16 bg-white p-8 rounded-3xl shadow-xl text-center" id="contact">
+      <h2 class="text-3xl font-bold mb-6">📬 Contact</h2>
+      <div class="flex flex-col sm:flex-row justify-center gap-6">
         <a href="mailto:abdulaziz@example.com" class="px-6 py-3 bg-black text-white rounded-lg shadow hover:bg-gray-800">✉️ Email</a>
         <a href="tel:+998901234567" class="px-6 py-3 bg-black text-white rounded-lg shadow hover:bg-gray-800">📞 Call</a>
         <a href="https://github.com/abdulazizdev" target="_blank" class="px-6 py-3 bg-black text-white rounded-lg shadow hover:bg-gray-800">💻 GitHub</a>
@@ -80,16 +127,15 @@
   </footer>
 
   <script>
-    ScrollReveal().reveal('#title', { delay: 200, origin: 'top', distance: '30px' });
-    ScrollReveal().reveal('#about, #skills, #projects, #gallery, #contact', {
-      delay: 200,
-      duration: 800,
+    ScrollReveal().reveal('header', { duration: 800, origin: 'top', distance: '40px' });
+    ScrollReveal().reveal('section', {
+      duration: 1000,
       origin: 'bottom',
-      distance: '40px',
-      easing: 'ease-in-out',
-      reset: false,
-      interval: 100
+      distance: '60px',
+      easing: 'ease-out',
+      interval: 200
     });
   </script>
 </body>
 </html>
+
